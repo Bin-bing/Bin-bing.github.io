@@ -2,6 +2,9 @@
 ---
 
 @import "reset";
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,400&display=swap');
+
+// typography
 
 html {font-size: 100%;} /*16px*/
 
@@ -40,50 +43,52 @@ small, .text_small {font-size: 0.8rem;}
 @media screen and (max-width: 600px) {
   h1, h2, h3 {
     font-size: 1.563rem;
+    margin-bottom: .5rem;
+
+    &.sitename {
+      font-size: 1rem;
+    }
   }
 }
 
+// layout styles
+
+.container {
+  max-width: 960px;
+  margin: 0 1.5rem;
+}
+
 .sitename {
-  font-size: 1rem;
+  font-weight: bold;
   margin: 0;
 }
 
-header {
-  padding: 1rem 1.5rem;
-  // padding: 1rem 2rem;
+header.site-header {
+  padding: 1rem 0;
   border-bottom: 2px solid;
   margin-bottom: 3rem;
 }
 
-header, nav ul {
+header .container, nav ul {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
 }
 
-nav ul li {
-  padding: .5rem .5rem;
-
-  &:last-child {
-    margin-right: -.5rem;
-  }
-}
-
-nav ul li {
-  // font-size: 1.125rem;
+nav {
+  width: 12ch;
 }
 
 a, a:visited {
   color: #7F0612 !important;
 }
 
-.container {
-  max-width: 960px;
-  padding: 0 1.5rem;
-}
-
 img {
   max-width: 100%;
+}
+
+section.home {
+    margin-bottom: 4rem;
 }
 
 .home article {
@@ -104,5 +109,72 @@ img {
   h3 {
     text-align: center;
     margin-bottom: 1rem;
+  }
+}
+
+// Tablet styles
+
+@media screen and (min-width: 601px) {
+
+  .container {
+    margin: 0 4rem;
+  }
+
+  nav {
+    width: 15ch;
+  }
+
+  nav ul li {
+    font-size: 1.125rem;
+  }
+
+  .portrait {
+    height: 400px;
+    overflow: hidden;
+    
+    img {
+      position: relative;
+      top: -20%;
+      width: 100%;
+    }
+  }
+}
+
+// Desktop
+
+@media screen and (min-width: 961px){
+  .container {
+    margin: 0 auto;
+    padding: 0 4rem;
+  }
+}
+
+// Large desktop
+
+@media screen and (min-width: 1280px) {
+
+  .container {
+    max-width: 1160px;
+  }
+  
+  section.home {
+    display: grid;
+    grid-template-areas: "portrait article" "portrait contact";
+    grid-column-gap: 3rem;
+    height: 75vh;
+    align-content: center;
+
+    article {
+      margin-top: 0;
+    }
+  }
+
+  .portrait {
+    grid-area: portrait;
+    height: auto;
+
+    img {
+      position: static;
+    }
   }
 }

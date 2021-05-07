@@ -1,0 +1,308 @@
+/***************/
+/* MEYER RESET */
+/***************/
+@import url("https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,400&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+/*16px*/
+body {
+  background: #eaf3f5;
+  font-family: 'Aleo', serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #212121;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 3rem 0 1.38rem;
+  font-family: 'Aleo', serif;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small, .text_small {
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 600px) {
+  h1, h2, h3 {
+    font-size: 1.563rem;
+    margin-bottom: .5rem;
+  }
+  h1.sitename, h2.sitename, h3.sitename {
+    font-size: 1rem;
+  }
+  .portrait {
+    display: flex;
+  }
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 1.5rem;
+}
+
+.sitename {
+  font-weight: bold;
+  margin: 0;
+}
+
+header.site-header {
+  padding: 1rem 0;
+  border-bottom: 2px solid;
+  margin-bottom: 3rem;
+}
+
+header .container, nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+nav {
+  width: 12ch;
+}
+
+a, a:visited {
+  color: #7F0612 !important;
+}
+
+img {
+  max-width: 100%;
+}
+
+section.home {
+  margin-bottom: 4rem;
+}
+
+.portrait {
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+  position: relative;
+}
+
+.portrait::before, .portrait::after {
+  border: 2px solid #7F0612;
+  background: transparent !important;
+  transform: scale(0.67) translate(0, -50%);
+}
+
+.portrait::after {
+  transform: scale(0.33) translate(-125%, 40%);
+  border-width: 16px;
+  opacity: .67;
+}
+
+.portrait .circle, .portrait .circle::before, .portrait .circle::after, .portrait::before, .portrait::after {
+  content: '';
+  width: 6rem;
+  height: 6rem;
+  background: #7F0612;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.portrait .circle {
+  transform: translate(-33%, -33%);
+  opacity: .67;
+}
+
+.portrait .circle::before {
+  background: #eaf3f5;
+  z-index: 1;
+  transform: scale(0.5) translate(8%, -33%);
+  opacity: .67;
+}
+
+.portrait .circle::after {
+  background: #eaf3f5;
+  z-index: 1;
+  transform: scale(0.25) translate(0, 33%);
+}
+
+.home article {
+  margin-top: 3rem;
+}
+
+.tracks {
+  display: grid;
+  grid-gap: 1rem;
+  margin: 3rem 0;
+}
+
+.track {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  border-radius: .5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.track h4 {
+  font-size: 1em;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.track audio {
+  max-width: 240px;
+}
+
+@media screen and (min-width: 601px) {
+  .container {
+    margin: 0 4rem;
+  }
+  nav {
+    width: 15ch;
+  }
+  nav ul li {
+    font-size: 1.125rem;
+  }
+  .portrait {
+    height: 400px;
+    overflow: hidden;
+  }
+  .portrait .circle, .portrait .circle::after, .portrait .circle::before, .portrait::before, .portrait::after {
+    display: none;
+  }
+  .portrait img {
+    position: relative;
+    top: -20%;
+    width: 100%;
+  }
+  .track {
+    padding: 1rem 2rem;
+  }
+  .track h4 {
+    font-size: 1.563rem;
+  }
+  .track audio {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 961px) {
+  .container {
+    margin: 0 auto;
+    padding: 0 4rem;
+  }
+  .tracks {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1160px;
+  }
+  section.home {
+    display: grid;
+    grid-template-areas: "portrait article" "portrait contact";
+    grid-column-gap: 3rem;
+    height: 75vh;
+    align-content: center;
+  }
+  section.home article {
+    margin-top: 0;
+  }
+  .portrait {
+    grid-area: portrait;
+    height: auto;
+    display: flex;
+    overflow: visible;
+  }
+  .portrait img {
+    position: static;
+  }
+  .portrait .circle, .portrait .circle::after, .portrait .circle::before, .portrait::before, .portrait::after {
+    display: block;
+  }
+  .tracks {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

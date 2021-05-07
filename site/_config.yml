@@ -11,9 +11,6 @@ description: A classic soprano
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
 
-collections:
-  tracks:
-
 #
 # Flags below are optional
 #
@@ -88,3 +85,5 @@ exclude:
   - README.md
   - CNAME
   - theme-style.scss
+
+destination: ../docs
